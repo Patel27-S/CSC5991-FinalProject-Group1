@@ -1,72 +1,102 @@
 [
     {
-        "Username": "RickyJohnson",
-        "Password": "$v!H2DJjNf",
-        "First_Name": "Ricky",
-        "Last_Name": "Johnson",
-        "Email": "RickyJohnson@google.com"
+        "Username": "BillSmith",
+        "Password": "y07V93Qs!7",
+        "First_Name": "Bill",
+        "Last_Name": "Smith",
+        "Email": "BillSmith@wayne.edu",
+        "Phone_Number": "1924112457",
+        "Address": "072 Deleon Avenue\nNorth Michaelhaven, AL 84629",
+        "Seats_Needed": 10
     },
     {
-        "Username": "QueensDe Villers",
-        "Password": "&2oMRUqfZn",
-        "First_Name": "Queens",
-        "Last_Name": "De Villers",
-        "Email": "QueensDe Villers@yahoo.com"
-    },
-    {
-        "Username": "MikeDu Plesis",
-        "Password": "N^iJY2sp3R",
+        "Username": "MikeThomas",
+        "Password": "P@3zF_DpqE",
         "First_Name": "Mike",
-        "Last_Name": "Du Plesis",
-        "Email": "MikeDu Plesis@google.com"
+        "Last_Name": "Thomas",
+        "Email": "MikeThomas@yahoo.com",
+        "Phone_Number": "4256825606",
+        "Address": "1057 Pitts Streets\nAmberview, GU 59270",
+        "Seats_Needed": 6
     },
     {
-        "Username": "JashJohnson",
-        "Password": "J#2pWw^4+1",
+        "Username": "JashMartin",
+        "Password": "+5DvXn7*#j",
         "First_Name": "Jash",
-        "Last_Name": "Johnson",
-        "Email": "JashJohnson@yahoo.com"
-    },
-    {
-        "Username": "GateyMiller",
-        "Password": "(5svNQ)p!a",
-        "First_Name": "Gatey",
-        "Last_Name": "Miller",
-        "Email": "GateyMiller@hotmail.com"
-    },
-    {
-        "Username": "HarryRichardson",
-        "Password": "E^a6QNXumL",
-        "First_Name": "Harry",
-        "Last_Name": "Richardson",
-        "Email": "HarryRichardson@yahoo.com"
-    },
-    {
-        "Username": "JohnMartin",
-        "Password": "A7hXGs7C)6",
-        "First_Name": "John",
         "Last_Name": "Martin",
-        "Email": "JohnMartin@yahoo.com"
+        "Email": "JashMartin@yahoo.com",
+        "Phone_Number": "4785262035",
+        "Address": "1057 Pitts Streets\nAmberview, GU 59270",
+        "Seats_Needed": 8
     },
     {
-        "Username": "DavidTaylor",
-        "Password": "c@^72ZE2yl",
-        "First_Name": "David",
-        "Last_Name": "Taylor",
-        "Email": "DavidTaylor@yahoo.com"
+        "Username": "QueensPonting",
+        "Password": "Cp1Uy5Fwu#",
+        "First_Name": "Queens",
+        "Last_Name": "Ponting",
+        "Email": "QueensPonting@hotmail.com",
+        "Phone_Number": "1250283683",
+        "Address": "05197 George Park\nLake Darylmouth, TN 47022",
+        "Seats_Needed": 9
     },
     {
-        "Username": "WillMiller",
-        "Password": "+5OnLF1(IH",
-        "First_Name": "Will",
+        "Username": "IsabellaWilliams",
+        "Password": "+8vLB*O1cz",
+        "First_Name": "Isabella",
+        "Last_Name": "Williams",
+        "Email": "IsabellaWilliams@yahoo.com",
+        "Phone_Number": "6353236622",
+        "Address": "232 Frank Club\nLake Adam, PR 01855",
+        "Seats_Needed": 3
+    },
+    {
+        "Username": "MikeMartin",
+        "Password": "(J7K^Ykve2",
+        "First_Name": "Mike",
+        "Last_Name": "Martin",
+        "Email": "MikeMartin@google.com",
+        "Phone_Number": "4927532966",
+        "Address": "072 Deleon Avenue\nNorth Michaelhaven, AL 84629",
+        "Seats_Needed": 8
+    },
+    {
+        "Username": "MikeWilliams",
+        "Password": "w@3#%ROpPC",
+        "First_Name": "Mike",
+        "Last_Name": "Williams",
+        "Email": "MikeWilliams@hotmail.com",
+        "Phone_Number": "8421137430",
+        "Address": "92548 Pamela Mission Suite 105\nLindashire, DE 34835",
+        "Seats_Needed": 5
+    },
+    {
+        "Username": "GateyThomas",
+        "Password": "M(!Y8!SfTW",
+        "First_Name": "Gatey",
+        "Last_Name": "Thomas",
+        "Email": "GateyThomas@google.com",
+        "Phone_Number": "5722382224",
+        "Address": "1057 Pitts Streets\nAmberview, GU 59270",
+        "Seats_Needed": 3
+    },
+    {
+        "Username": "JamesDuPlesis",
+        "Password": "q#2S$OGvN&",
+        "First_Name": "James",
+        "Last_Name": "DuPlesis",
+        "Email": "JamesDuPlesis@yahoo.com",
+        "Phone_Number": "1986560288",
+        "Address": "05197 George Park\nLake Darylmouth, TN 47022",
+        "Seats_Needed": 6
+    },
+    {
+        "Username": "RickyMiller",
+        "Password": "ST2eJFby!f",
+        "First_Name": "Ricky",
         "Last_Name": "Miller",
-        "Email": "WillMiller@wayne.edu"
-    },
-    {
-        "Username": "DavidDe Villers",
-        "Password": "9gIy*Pxz%^",
-        "First_Name": "David",
-        "Last_Name": "De Villers",
-        "Email": "DavidDe Villers@hotmail.com"
+        "Email": "RickyMiller@google.com",
+        "Phone_Number": "2393111113",
+        "Address": "980 Fleming Estates Suite 022\nAndrewborough, CO 27140",
+        "Seats_Needed": 10
     }
 ]
