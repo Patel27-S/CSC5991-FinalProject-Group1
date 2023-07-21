@@ -77,5 +77,6 @@ json.dump(user_list, user_file, indent=4)
 user_file.close()
 
 
-# Generating Fake Restaurants' data :-
+
+
 
