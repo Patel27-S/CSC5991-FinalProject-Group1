@@ -6,4 +6,18 @@ Install MongoDB: Make sure you have MongoDB installed on your system. If you hav
 
 Start MongoDB Server: Start the MongoDB server by running the mongod command in your terminal or command prompt. This will start the MongoDB server, allowing you to connect to it and interact with databases.
 
-Prepare JSON Data Files: Create two JSON files in the same directory as your Python script - restaurant_list.json and user_list.json. Fill these files with the data you want to insert into the respective MongoDB collections. For example:
+Prepare JSON Data Files: Create two JSON files in the same directory as your Python script - restaurant_list.json and user_list.json. Fill these files with the data you want to insert into the respective MongoDB collections.
+
+Install Required Libraries --> pip install pymongo
+Run the Python Script --> python insert_data.py
+
+Verify Data in MongoDB
+mongo
+use restaurant
+db.restaurants.find().pretty()
+
+similarily for users collection,
+mongo
+use restaurant
+db.users.find().pretty()
+
