@@ -1,0 +1,62 @@
+[
+    {
+        "Name": "The Savory Spoon",
+        "Phone_Number": "8318237525",
+        "Address": "268 Lewis Neck\nNorth Morganland, RI 09223",
+        "Available_Seats": 17
+    },
+    {
+        "Name": "Fusion Bites",
+        "Phone_Number": "6620827951",
+        "Address": "80767 Christian Junction\nWilliamsfurt, ME 63413",
+        "Available_Seats": 6
+    },
+    {
+        "Name": "Catch Burger",
+        "Phone_Number": "5333116543",
+        "Address": "333 Andrew Hills Apt. 318\nAlvaradobury, WA 44209",
+        "Available_Seats": 14
+    },
+    {
+        "Name": "Sizzling Food",
+        "Phone_Number": "6159116106",
+        "Address": "90190 Susan Keys\nAntonioland, WV 00664",
+        "Available_Seats": 11
+    },
+    {
+        "Name": "The Green Leaf Cafe",
+        "Phone_Number": "6664702763",
+        "Address": "USNS Walker\nFPO AE 94914",
+        "Available_Seats": 3
+    },
+    {
+        "Name": "Sweet Indulgence Dessert Bar",
+        "Phone_Number": "8666994909",
+        "Address": "Unit 9895 Box 8208\nDPO AP 62654",
+        "Available_Seats": 4
+    },
+    {
+        "Name": "The IceCream Place",
+        "Phone_Number": "2312183872",
+        "Address": "1075 Karen Ridges Suite 759\nThomashaven, WY 32689",
+        "Available_Seats": 17
+    },
+    {
+        "Name": "Hey Pizzeria",
+        "Phone_Number": "6212195688",
+        "Address": "3172 Kimberly Plaza Apt. 714\nNew Carolmouth, OH 49512",
+        "Available_Seats": 4
+    },
+    {
+        "Name": "Da Planet Pizza",
+        "Phone_Number": "9384584432",
+        "Address": "057 Nicholas Lodge\nWoodwardport, PR 53802",
+        "Available_Seats": 19
+    },
+    {
+        "Name": "The Kofta Palace",
+        "Phone_Number": "8583989550",
+        "Address": "2253 Jeffrey Branch Suite 547\nEricaport, MO 18848",
+        "Available_Seats": 6
+    }
+]
