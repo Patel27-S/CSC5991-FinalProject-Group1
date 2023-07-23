@@ -31,3 +31,10 @@ mongo
 use restaurant
 db.users.find().pretty()
 
+To run:
+- run mongoDb server (on linux --> sudo mongod --dbpath /data/db)
+- run insert_data.py to have database locally (python insert_data.py)
+- run app.py to have server serving information from database (python app.py)
+---> Displayed Here:
+---- http://localhost:5000/api/users    (All user information from database)
+---- http://localhost:5000/api/restaurants (All restaurant information from database)
