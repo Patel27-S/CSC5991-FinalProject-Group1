@@ -37,4 +37,7 @@ To run:
 - run app.py to have server serving information from database (python app.py)
 ---> Displayed Here:
 ---- http://localhost:5000/api/users    (All user information from database)
+---- http://localhost:5000/api/users/username/<username>   (User information according to the username)
+---- http://localhost:5000/api/users/email/<email>  (User information according to the email)
 ---- http://localhost:5000/api/restaurants (All restaurant information from database)
+

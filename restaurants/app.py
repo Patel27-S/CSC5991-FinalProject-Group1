@@ -20,11 +20,5 @@ def get_restaurants():
     restaurants = list(db['restaurants'].find({}))
     return jsonify_with_objectid(restaurants)
 
-# API Endpoint to fetch all users
-@app.route('/api/users', methods=['GET'])
-def get_users():
-    users = list(db['users'].find({}))
-    return jsonify_with_objectid(users)
-
 if __name__ == '__main__':
     app.run(debug=True)
