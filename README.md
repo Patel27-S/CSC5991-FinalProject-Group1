@@ -40,4 +40,5 @@ To run:
 ---- http://localhost:5000/api/users/username/<username>   (User information according to the username)
 ---- http://localhost:5000/api/users/email/<email>  (User information according to the email)
 ---- http://localhost:5000/api/restaurants (All restaurant information from database)
+---- http://localhost:5000/api/restaurants/<Name> (Restaurant Information for the Name that matched the Query)
 
