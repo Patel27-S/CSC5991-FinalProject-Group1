@@ -40,7 +40,7 @@ def generate_random_integers(length):
     return random_integers
 
 list_of_available_seats = generate_random_integers(20)
-listOfRatings = generate_random_rating_integers(5)
+listOfRatings = generate_random_rating_integers(6)
 
 restaurant_list = []
 restaurant_file = open("./DataGenerator/restaurant_list.json", "w+") # Creating a File and giving the Access to Write.
