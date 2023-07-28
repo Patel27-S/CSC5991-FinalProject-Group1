@@ -23,12 +23,12 @@ def get_restaurants():
 
 # API Endpoint for listing all the restaurants on the basis of 
 # Name.
-@app.route('/api/restaurants/<Name>', methods=['GET'])
+@app.route('/api/restaurants/<string:Name>', methods=['GET'])
 def get_restaurants_seats_available(Name):
     try:
         restaurant = db['restaurants'].find_one({"Name" : Name})
     except:
-        print("Please try anothet restaurant")
+        print("Please try another restaurant.")
     return jsonify_with_objectid(restaurant)
 
 
