@@ -28,6 +28,11 @@ restaurant_phone_numbers = generate_random_10_phone_numbers_list(length_of_list)
 length_of_list = 10
 restaurant_random_addresses_list = generate_random_addresses_list(length_of_list)
 
+# Method for generating random Ratings :-
+def generate_random_rating_integers(length):
+    randomRatings = [random.randint(1, 5) for _ in range(length)]
+    return randomRatings
+
 
 # Number of Available Seats for each Restaurant :-
 def generate_random_integers(length):
@@ -35,6 +40,7 @@ def generate_random_integers(length):
     return random_integers
 
 list_of_available_seats = generate_random_integers(20)
+listOfRatings = generate_random_rating_integers(6)
 
 restaurant_list = []
 restaurant_file = open("./DataGenerator/restaurant_list.json", "w+") # Creating a File and giving the Access to Write.
@@ -45,11 +51,13 @@ for x in range(10):
     phone_number = restaurant_phone_numbers[x]
     address = restaurant_random_addresses_list[x] # Two users registered on the App may have same address.
     available_seats = random.choice(list_of_available_seats)
+    restaurant_ratings = random.choice(listOfRatings)
     restaurant_list.append({
                       "Name": name,
                       "Phone_Number": phone_number,
                       "Address": address,
                       "Available_Seats": available_seats,
+                      "Rating": restaurant_ratings,
                      })
 print(restaurant_list)
 json.dump(restaurant_list, restaurant_file, indent=4)
