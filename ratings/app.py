@@ -32,13 +32,6 @@ def add_Ratings():
     )
 
 
-@app.route("/FiveStarList", methods=["GET"])
-def five_star_list():
-    # pull all 5 star restaurant from table and display
-    top_five_restaurants = dict(db["restaurant"].find({"Rating": "5"}))
-    return jsonify(top_five_restaurants)
-
-
 app.route("/GetRatings", methods=["GET"])
 def get_Ratings():
     input_Restaurant = request.args.get("restaurant")
@@ -47,12 +40,6 @@ def get_Ratings():
     )
     return jsonify(current_Rating)
 
-
-@app.route("/TopThreeRestaurants", methods=["GET"])
-def top_three():
-    # pull first 3 restaurants from table and display
-    top_three_restaurants = dict(db['restaurant'].find().sort('Rating',-1).limit(3))
-    return jsonify_with_objectid(top_three_restaurants)
 
 
 if __name__ == "__main__":
