@@ -39,7 +39,5 @@ def get_restaurants_seats_available(Name):
 #     restaurant = db['restaurants'].find({"Available_Seats" : {"$et": Seats_Required, "$gt": Seats_Required}})
 #     return jsonify_with_objectid(restaurant)
 
-
-
 if __name__ == '__main__':
     app.run(debug=True)
