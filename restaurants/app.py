@@ -10,26 +10,34 @@ client = MongoClient('localhost', 27017)
 db = client['restaurant']  # Replace 'restaurant' with your database name
 
 # Helper function to convert ObjectId to string
-def jsonify_with_objectid(data):
+def jsonify_with_objectid_array(data):
     for document in data:
         document['_id'] = str(document['_id'])
+    return jsonify(data)
+
+def jsonify_with_objectid(data):
+    data['_id'] = str(data['_id'])
     return jsonify(data)
 
 # API Endpoint to fetch all restaurants
 @app.route('/api/restaurants', methods=['GET'])
 def get_restaurants():
     restaurants = list(db['restaurants'].find({}))
-    return jsonify_with_objectid(restaurants)
+    return jsonify_with_objectid_array(restaurants)
 
 # API Endpoint for listing all the restaurants on the basis of 
 # Name.
 @app.route('/api/restaurants/<Name>', methods=['GET'])
 def get_restaurants_seats_available(Name):
+    global restaurant
     try:
         restaurant = db['restaurants'].find_one({"Name" : Name})
     except:
-        print("Please try anothet restaurant")
-    return jsonify_with_objectid(restaurant)
+        print("Error while retrieving a restaurant")
+    if restaurant ==None:
+         return jsonify({"message": f"Restaurant is not available. Please try another restaurant"})
+    else:
+        return jsonify_with_objectid(restaurant)
 
 
 # API Endpoint for listing all the restaurants on the basis of 
