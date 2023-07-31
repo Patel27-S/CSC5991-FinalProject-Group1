@@ -33,11 +33,9 @@ def get_restaurants_seats_available(Name):
     try:
         restaurant = db['restaurants'].find_one({"Name" : Name})
     except:
-        print("Please try another restaurant.")
-    return jsonify_with_objectid(restaurant)
         print("Error while retrieving a restaurant")
     if restaurant ==None:
-         return jsonify({"message": f"Restaurant is not available. Please try another restaurant"})
+        return jsonify({"message": f"Restaurant is not available. Please try another restaurant"})
     else:
         return jsonify_with_objectid(restaurant)
 
