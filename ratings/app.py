@@ -26,5 +26,12 @@ def five_star_list():
     return jsonify_with_objectid(top_five_restaurants)
 
 
+@app.route("/TopThreeRestaurants", methods=["GET"])
+def top_three():
+    # pull first 3 restaurants from table and display
+    top_three_restaurants = dict(db['restaurant'].find().sort('Rating',-1).limit(3))
+    return jsonify_with_objectid(top_three_restaurants)
+
+
 if __name__ == "__main__":
     app.run(debug=True)

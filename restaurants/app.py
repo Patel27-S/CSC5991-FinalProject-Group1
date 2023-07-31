@@ -27,17 +27,20 @@ def get_restaurants():
 
 # API Endpoint for listing all the restaurants on the basis of 
 # Name.
-@app.route('/api/restaurants/<Name>', methods=['GET'])
+@app.route('/api/restaurants/<string:Name>', methods=['GET'])
 def get_restaurants_seats_available(Name):
     global restaurant
     try:
         restaurant = db['restaurants'].find_one({"Name" : Name})
     except:
+        print("Please try another restaurant.")
+    return jsonify_with_objectid(restaurant)
         print("Error while retrieving a restaurant")
     if restaurant ==None:
          return jsonify({"message": f"Restaurant is not available. Please try another restaurant"})
     else:
         return jsonify_with_objectid(restaurant)
+
 
 
 # API Endpoint for listing all the restaurants on the basis of 
@@ -46,8 +49,6 @@ def get_restaurants_seats_available(Name):
 # def get_restaurants_seats_available(Seats_Required):
 #     restaurant = db['restaurants'].find({"Available_Seats" : {"$et": Seats_Required, "$gt": Seats_Required}})
 #     return jsonify_with_objectid(restaurant)
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)
