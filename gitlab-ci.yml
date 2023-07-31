@@ -1,0 +1,23 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: docker:stable
+  services:
+    - docker:dind
+  script:
+    - docker build -t <dockerhub_username>/<image_name>:<tag> .
+    - docker login -u <dockerhub_username> -p $DOCKERHUB_TOKEN
+    - docker push <dockerhub_username>/<image_name>:<tag>
+  only:
+    - master
+
+deploy:
+  stage: deploy
+  image: <kubernetes_cli_image> # Image with kubectl and other Kubernetes tools
+  script:
+    - kubectl apply -f kubernetes/ # Directory containing Kubernetes YAML files
+  only:
+    - master
