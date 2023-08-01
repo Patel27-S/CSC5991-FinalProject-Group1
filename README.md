@@ -36,6 +36,7 @@ To run:
 - run insert_data.py to have database locally (python insert_data.py)
 - run app.py to have server serving information from database (python app.py)
 ---> Displayed Here:
+---- http://localhost:5000 (User Login)
 ---- http://localhost:5000/api/users    (All user information from database)
 ---- http://localhost:5000/api/users/username/<username>   (User information according to the username)
 ---- http://localhost:5000/api/users/email/<email>  (User information according to the email)
