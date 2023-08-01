@@ -1,0 +1,15 @@
+{% block body %}
+
+Welcome {{ userAccount }}!
+
+<div>
+<h3>Search a Restaurant</h3>
+<form action="/search/restaurant" method="POST">
+<table>
+    <tr><td><input type="search" name="search"/></td></tr>
+    <tr><td colspan="2" style="text-align:center"><input class="sub" type="submit" value="Search"/></td></tr>
+</table>
+</form>
+</div>
+
+{% endblock %}
