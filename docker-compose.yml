@@ -1,9 +1,13 @@
 services:
-  db:
+  mongodb:
     image: mongo:latest
     ports:
         - "27017:27017"
     container_name: data
+  mongo-seed:
+    build: ./DataGenerator
+    depends_on:
+      - mongodb
   ratings:
     image: smitpatel27/ratings:latest
     ports:
