@@ -20,13 +20,12 @@ def calculate_Rating(rating, current_Rating):
 def add_Ratings():
     input_Restaurant = request.args.get("restaurant")
     input_Rating = request.args.get("rating")
-    current_Rating = int(
-        db["restaurant"].db.find({"name": input_Restaurant}, {"Ratings: "})
-    )  ##Gets the current ratings of that restaurant
+    current_Rating =  db["restaurant"].db.find({"name": input_Restaurant}, {"Ratings: "})
+     ##Gets the current ratings of that restaurant
     return jsonify(
         db["restaurant"].db.find_one_and_update(
             {"name": input_Restaurant},
-            {"$set": {"Rating": calculate_Rating(input_Rating, current_Rating)}},
+            {"$set": {"Rating": str(calculate_Rating(input_Rating, int(current_Rating)))}},
             return_document=ReturnDocument.AFTER,
         )
     )

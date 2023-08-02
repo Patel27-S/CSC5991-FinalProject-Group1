@@ -1,0 +1,24 @@
+{% block body %}
+<style>
+table, th, td {
+  border: 1px solid;
+}
+</style>
+<div>
+    <table>
+        <tr>
+            <th>Address</th>
+            <th>Available_Seats</th>
+            <th>Name</th>
+            <th>Phone_Number</th>
+        </tr>
+        <tr>
+            <td>{{ search_result.Address }}</td>
+            <td>{{ search_result.Available_Seats }}</td>
+            <td>{{ search_result.Name }}</td>
+            <td>{{ search_result.Phone_Number }}</td>
+        </tr>
+    </table>
+</div>
+
+{% endblock %}

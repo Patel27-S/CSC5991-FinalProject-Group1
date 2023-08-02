@@ -1,0 +1,42 @@
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+        - "27017:27017"
+    container_name: data
+  mongo-seed:
+    build: ./DataGenerator
+    depends_on:
+      - mongodb
+  ratings:
+    image: smitpatel27/ratings:latest
+    ports:
+        - "5003:5000"
+  reservation:
+    image: smitpatel27/reservation:latest
+    ports:
+        - "5004:5000"
+  restaurantbyname:
+    image: smitpatel27/restaurantbyname:latest
+    ports:
+        - "5005:5000"
+  restaurants:
+    image: smitpatel27/restaurants:latest
+    ports:
+        - "5001:5000"
+  topratedrestaurants:
+    image: smitpatel27/topratedrestaurants:latest
+    ports:
+        - "5006:5000"
+  userbymail:
+    image: smitpatel27/userbymail:latest
+    ports:
+        - "5007:5000"
+  userbyname:
+    image: smitpatel27/userbyname:latest
+    ports:
+        - "5002:5000"
+  user:
+    image: smitpatel27/users:latest
+    ports:
+        - "8008:5000"
