@@ -29,14 +29,20 @@ def book_table(restaurant_name, num_of_seats):
     if available_seats >= num_of_seats:
 
         new_available_seats = available_seats - num_of_seats
-        db['restaurants'].update_one({"_id": restaurant["_id"]}, {"$set": {"Available_Seats": new_available_seats}})
 
-    #Updated with booked tables infromation
+        db['restaurants'].update_one(
+            {"_id": restaurant["_id"]},
+            {
+                "$set": {"Available_Seats": new_available_seats},
+                "$push": {"Booked_Tables": {"num_of_seats": num_of_seats}}
+            }
+        )
 
-        booked_tables = restaurant.get("Booked_Tables", [])
-        booked_tables.append({"num_of_seats": num_of_seats})
-        db['restaurants'].update_one({"_id": restaurant["_id"]}, {"$set": {"Booked_Tables": booked_tables},"$push": {"Booked_Tables": {"num_of_seats": num_of_seats}} })
-
+    ####Updated with booked tables infromation
+        #booked_tables = restaurant.get("Booked_Tables", [])
+        #booked_tables.append({"num_of_seats": num_of_seats})
+        #db['restaurants'].update_one({"_id": restaurant["_id"]}, {"$set": {"Booked_Tables": booked_tables},"$push": {"Booked_Tables": {"num_of_seats": num_of_seats}} })
+    ####
         return jsonify({"message": f"Table booked at {restaurant_name} for {num_of_seats} seats."}), 200
     else:
         return jsonify({"message": f"Sorry, {restaurant_name} doesn't have enough available seats for {num_of_seats} people."}), 400
