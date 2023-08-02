@@ -25,7 +25,7 @@ def add_Ratings():
     return jsonify(
         db["restaurant"].db.find_one_and_update(
             {"name": input_Restaurant},
-            {"$set": {"Rating": calculate_Rating(input_Rating, int(current_Rating))}},
+            {"$set": {"Rating": str(calculate_Rating(input_Rating, int(current_Rating)))}},
             return_document=ReturnDocument.AFTER,
         )
     )
